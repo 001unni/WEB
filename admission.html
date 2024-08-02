@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Admission Form</title>
+  <style>
+    /* Style for the entire body */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('/images/bc.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Style for the form container */
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-image: url('/images/bc3.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fcfcfc;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="file"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    input[type="file"] {
+      padding: 0;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      gap: 10px; /* Space between buttons */
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .top-header {
+      background: #a0cbee;
+      padding: 5px 0;
+      border-bottom: 1px solid #3131315e;
+    }
+
+    .container {
+      width: 1500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .news-list {
+      background: #70bcdf;
+      color: rgb(15, 15, 15);
+      padding: 6px;
+      font-size: 20px;
+    }
+
+    .headquote {
+      font-size: 18px;
+      color: #0e0d0d;
+      width: 80%;
+    }
+
+    .width-100 {
+      width: 100%;
+      float: left;
+    }
+
+    small {
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="width-100 top-header">
+    <div class="container">
+      <div class="width-100">
+        <b class="news-list">NEWS :</b>
+        <marquee class="headquote"><b>ADMISSION STARTED FOR ACADEMIC YEAR 2024-25...Last Date up to 30/09/2024</b></marquee>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <h1><u>University Admission Form</u></h1>
+    <form action="submission.html" method="get" enctype="multipart/form-data">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" maxlength="10" required>
+      <small id="phoneError">Please enter a valid 10-digit phone number.</small>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="gender">Gender</label>
+      <div>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+      </div>
+      <div>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </div>
+      <div>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+      </div>
+
+
+      <label for="caste">Caste</label>
+      <select id="caste" name="caste" required>
+        <option value="">Select Caste</option>
+        <option value="general">General</option>
+        <option value="obc">OBC</option>
+        <option value="sc">SC</option>
+        <option value="st">ST</option>
+      </select>
+
+
+      <label for="program">Program Applying For</label>
+      <select id="program" name="program" required>
+        <option value="">Select Program</option>
+        <option value="computerScience">Computer Science</option>
+        <option value="engineering">Engineering</option>
+        <option value="business">Business Administration</option>
+        <option value="medicine">Medicine</option>
+      </select>
+
+      <label for="education">Educational Background</label>
+      <select id="education" name="education" required>
+        <option value="">Select Education</option>
+        <option value="BSC">BSc</option>
+        <option value="Ba">BA</option>
+        <option value="BCOM">BCom</option>
+        <option value="ARTS">Arts</option>
+      </select>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" required></textarea>
+
+      <label for="statement">Statement of Purpose</label>
+      <textarea id="statement" name="statement" required></textarea>
+
+      <label for="photo">Upload Photo</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required>
+
+      <label for="signature">Upload Signature</label>
+      <input type="file" id="signature" name="signature" accept="image/*" required>
+
+      <label for="sslcCertificate">Upload SSLC Certificate</label>
+      <input type="file" id="sslcCertificate" name="sslcCertificate" accept=".pdf,.jpg,.jpeg,.png" required>
+
+      <label for="plusTwoCertificate">Upload Plus Two Certificate</label>
+      <input type="file" id="plusTwoCertificate" name="plusTwoCertificate" accept=".pdf,.jpg,.jpeg,.png" required>
+
+      <label for="degreeCertificate">Upload Degree Certificate</label>
+      <input type="file" id="degreeCertificate" name="degreeCertificate" accept=".pdf,.jpg,.jpeg,.png" required>
+
+      <div class="button">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('phone').addEventListener('input', function () {
+      const phoneInput = this.value;
+      const phoneError = document.getElementById('phoneError');
+
+      if (/^\d{10}$/.test(phoneInput)) {
+        phoneError.style.display = 'none';
+        this.setCustomValidity(''); // Reset custom validity message
+      } else {
+        phoneError.style.display = 'block';
+        this.setCustomValidity('Invalid'); // Prevent form submission
+      }
+    });
+  </script>
+</body>
+</html>

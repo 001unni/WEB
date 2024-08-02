@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance Education</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+/* Global Reset and Box-Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* General Container Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #34495e;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #2c3e50;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    height: 400px;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Section Styling */
+.section {
+    padding: 60px 0;
+    text-align: left;
+}
+
+/* Admission, Courses, Gallery, Contact Section Styling */
+.admission,
+.courses,
+.gallery,
+.contact {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* Section Headings Styling */
+h2 {
+    font-size: 2rem;
+    margin: 0; /* Removes any margin above */
+    margin-bottom: 20px;
+    padding-top: 0; /* Ensures no padding above */
+    color: #333; /* Set the color for consistency */
+    border-bottom: 2px solid #e74c3c; /* Underline for emphasis */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Paragraph and List Styling */
+p, ol {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify; /* Justified alignment for paragraphs */
+}
+
+ol {
+    padding-left: 20px;
+}
+
+/* Links Styling */
+.admission a {
+    color: #e74c3c;
+    text-decoration: none;
+    border-bottom: 1px dashed #e74c3c;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.admission a:hover {
+    color: #c0392b;
+    border-bottom: 1px solid #c0392b;
+}
+
+/* Courses List Styling */
+.courses ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.courses ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.courses ul li:hover {
+    background-color: #bdc3c7;
+}
+
+/* Gallery Styling */
+.gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section Styling */
+.contact p {
+    font-size: 1.1rem;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .courses ul li, .gallery img {
+        margin-bottom: 15px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1><i>Distance Education</i></h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#admission">Admission</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Welcome to Distance Education</h1>
+    </section>
+
+    <section class="section admission" id="admission">
+        <div class="container">
+            <h2>Admission Process</h2>
+            <p>Welcome to our Distance Education program. Follow the steps below to complete your admission:</p>
+            <ol>
+                <li>Visit our <a href="admission.html">Admission Page</a>.</li>
+                <li>Fill out the online application form.</li>
+                <li>Upload the required documents.</li>
+                <li>Pay the application fee.</li>
+                <li>Wait for the confirmation email.</li>
+            </ol>
+            <p>For more details, contact our admissions office.</p>
+        </div>
+    </section>
+
+    <section class="section courses" id="courses">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <ul>
+                <li>Bachelor of Arts (BA)</li>
+                <li>Bachelor of Science (BSc)</li>
+                <li>Master of Business Administration (MBA)</li>
+                <li>Master of Computer Applications (MCA)</li>
+                <li>Diploma in Education (D.Ed)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <img src="images/photo1.jpg" alt="Campus Image 1">
+            <img src="images/photo2.jpg" alt="Campus Image 2">
+            <img src="images/photo3.jpg" alt="Campus Image 3">
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: info@distanceeducation.com</p><br
+            <p>Phone: +1 234 567 890</p><br>
+            <p>Address: 123 Education Lane, Learning City, Knowledge State</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Distance Education. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
